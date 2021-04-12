@@ -1,30 +1,30 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  
+  <div class="flex cursor-pointer">
+    <div class="flex px-8 py-4">
+      <img class="h-8 w-8" src=".\assets\v-live.png" />
+      <p class="text-2xl font-black pl-2">VLIVE</p>
+    </div>
+    <div class="text-base px-5 py-5 hover:underline">
+    <router-link to="/">Home</router-link>
+    </div>
+    <p class="text-base px-5 pt-5 hover:underline">Sign Up</p>
+    <div class="w-3/6 ml-80 flex items-center justify-end">
+      <p class="text-base pl-4 pr-4 py-2 hover:bg-gray-200 rounded-lg">
+        Sign In
+      </p>
+      <div class="relative pl-3 text-base">
+        <select class="cursor-pointer transform hover:scale-110">
+          <option>English</option>
+          <option>한국어</option>
+          <option>ภาษาไทย</option>
+        </select>
+      </div>
+    </div>
   </div>
-  <router-view/>
+
+  <router-view />
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>

@@ -1,34 +1,33 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-router" target="_blank" rel="noopener">router</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
-  </div>
+<div  class="h-screen w-screen mx-auto ">
+         <div class="border py-10 bg-dark">
+        <h1 class="text-4xl  text-sky  text-center ">{{ msg }}</h1>
+        </div>
+
+        <div class=" flex transform hover:scale-110  ">
+            <img class="pl-20 py-10 cursor-pointer " src="..\assets\pic1.jpg">
+            <div class="border-2 md:border-t-1  mt-10 mb-10">
+                <p class="text-xl pt-6 pl-5 pr-8 tracking-tight hover:underline cursor-pointer ">Beyond LIVE - SUPER
+                    JUNIOR 15th Anniversary Special<br />Event – 초대(Invitation)</p>
+                <p class="text-sm pt-1 pl-5 text-gray-400 tracking-tight">03.11.2020 - 07.11.2020</p>
+                <p class="text-xs pt-2 pl-5">11/7 (SAT) 17:00 (KST) Welcome to online-fanmeeting of SuperJunior's
+                    15th<br />anniversary!</p>
+            </div>
+        </div>
+
+        <div class="flex transform hover:scale-110  ">
+            <img class="pl-20 mb-20 mt-0 cursor-pointer " src="..\assets\pic2.jpg">
+            <div class="border-2 md:border-t-1  mt-0 mb-20">
+                <p class="text-xl pt-6 pl-5 pr-8 tracking-tight hover:underline cursor-pointer">Heart 4 U - CHANYEOL
+                    Membership!</p>
+                <p class="text-sm pt-1 pl-5 text-gray-400 tracking-tight">06.10.2020 - 25.12.2020</p>
+                <p class="text-xs pt-4 pl-5 pr-14 ">เข้าร่วม 'Heart 4 U - CHANYEOL' MEMBERSHIP ตอนนี้
+                    แล้วพบกับตอนหลักล่วงหน้าสอง<br />สัปดาห์!</p>
+            </div>
+        </div>
+
+    </div>
+    
 </template>
 
 <script>
@@ -42,18 +41,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+h1 {
+    margin-top: 10pt;
+    font-weight: bold; 
 }
 </style>
