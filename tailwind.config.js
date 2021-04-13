@@ -6,7 +6,10 @@ module.exports = {
     extend: {
       colors: {
         sky:  '#48CAE4',
-        dark: '#5C677D'
+        dark: '#5C677D',
+        lemon: '#70E000',
+        rose: '#FF99AC',
+        lavender: '#CDB4DB'
       }
       
     },
