@@ -13,6 +13,4 @@
 .login {
     @apply flex justify-center mt-4 cursor-pointer;
 }
-.news {
-    @apply flex transform hover:scale-110 ;  
-}
+

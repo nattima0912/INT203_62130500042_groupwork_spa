@@ -14,7 +14,7 @@
   </div>
     <p class=" text-center text-lg ">Or</p>
   <div class="login">
-    <p class=" text-center py-3 bg-lemon  w-3/12  text-white ">Login with Line</p>
+    <p class=" text-center py-3 bg-mango-lemon  w-3/12  text-white ">Login with Line</p>
   </div>
   <div class="login">
     <p class=" text-center py-3 bg-blue-700  w-3/12  text-white ">Login with Facebook</p>

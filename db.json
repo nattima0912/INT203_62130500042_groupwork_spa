@@ -1,12 +1,22 @@
 {
-    "regisDetail": [
-        {
-            "firstname": "nattima" ,
-            "lastname": "mahapan",
-            "genders": "female",
-            "email": "nat@gmail.com",
-            "phone": "26846546",
-            "birth": "15/05/2000"
-        }
-    ]
+  "regisDetail": [
+    {
+      "firstname": "nattima",
+      "lastname": "mahapan",
+      "genders": "female",
+      "email": "nat@gmail.com",
+      "username": "26846546",
+      "birth": "15/05/2000",
+      "id": 1
+    },
+    {
+      "firstname": "hf",
+      "lastname": "sfdszf",
+      "email": "nattima0912@gmail.com",
+      "username": "natti",
+      "birth": "2013-02-13",
+      "genders": "female",
+      "id": 2
+    }  
+  ]
 }

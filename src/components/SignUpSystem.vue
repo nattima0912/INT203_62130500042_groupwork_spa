@@ -47,16 +47,16 @@
               </p>
             </div>
             <div class="format">
-              <label for="phone" class="text-sm text-gray-600">Phone</label>
+              <label for="username" class="text-sm text-gray-600">Username</label>
               <input
                 type="text"
-                id="phone"
-                v-model="phone"
+                id="username"
+                v-model="username"
                 class="regis"
-                :class="{ 'bg-red-50': PhoneInput }"
+                :class="{ 'bg-red-50': UsernameInput }"
               />
-              <p v-if="PhoneInput" class="text-red-500">
-                Please enter your phone!
+              <p v-if="UsernameInput" class="text-red-500">
+                Please enter your username!
               </p>
             </div>
             <div class="format">
@@ -86,8 +86,23 @@
             </div>
             </div>
             <div>
-              <button class="px-9 py-2.5 bg-black rounded-lg text-white mt-3 hover:bg-pink-600 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">Sign Up</button>
+              <button class="px-9 py-2.5 bg-black rounded-lg text-white mt-3 hover:bg-pink-500">Sign Up</button>
             </div>
+            <ul v-for="regis in regisDetail" :key="regis.id">
+              <li class="mt-3">
+                <span class="text-red-500 font-bold text-lg ">{{ regis.username }}</span> 
+                <p class="text-gray-600"> have successfully registered! <br>
+                If you want to edit or delete your data. Please cilck.. <br></p>
+                <div class="flex justify-center">
+                <div class="mr-3">
+                <button @click="showRegis(regis)" class="px-11 py-2.5 bg-mango-default rounded-lg text-white mt-3">
+                  Edit</button>
+                </div>  
+                <button @click="deleteRegis(regis.id)" class="px-9 py-2.5 bg-red-400 rounded-lg text-white mt-3">
+                  Delete</button>
+                </div>
+              </li>
+            </ul>
         </div>
       </div>
     </form>
@@ -102,16 +117,19 @@ export default {
   },
   data() {
     return {
+          url: "http://localhost:5000/regisDetail",
+          edit: false,
+          editId: "",
           firstname: "",
           lastname: "",
           genders: "",
           email: "",
-          phone: "",
+          username: "",
           birth: null,
           FirstnameInput: false,
           LastnameInput: false,
           EmailInput: false,
-          PhoneInput: false,
+          UsernameInput: false,
           BirthInput: false,
           GenderInput: false,
           regisDetail: []
@@ -119,14 +137,76 @@ export default {
   },
   methods: {
     regisForm() {
-      this.FirstnameInput = this.firstname == "" ? true : false;
-      this.LastnameInput = this.lastname == "" ? true : false;
-      this.EmailInput = this.email == "" ? true : false;
-      this.PhoneInput = this.phone == "" ? true : false;
-      this.BirthInput = this.birth == null ? true : false;
-      this.GenderInput = this.genders == "" ? true : false;
+      this.FirstnameInput = this.firstname === "" ? true : false;
+      this.LastnameInput = this.lastname === "" ? true : false;
+      this.EmailInput = this.email === "" ? true : false;
+      this.UsernameInput = this.username === "" ? true : false;
+      this.BirthInput = this.birth === null ? true : false;
+      this.GenderInput = this.genders === "" ? true : false;
 
-
+      if(this.firstname !== "" && this.lastname !== "" && this.email !== "" &&
+        this.username !== "" && this.birth !== null && this.genders !== "") {
+          if(this.edit) {
+            this.editRegis({
+              id: this.editId,
+              firstname: this.firstname,
+              lastname: this.lastname,
+              email: this.email,
+              username: this.username,
+              birth: this.birth,
+              genders: this.genders
+            });
+          }else{
+            this.addRegis({
+              firstname: this.firstname,
+              lastname: this.lastname,
+              email: this.email,
+              username: this.username,
+              birth: this.birth,
+              genders: this.genders
+            });
+          }
+        }
+        this.firstname = "";
+        this.lastname = "";
+        this.email = "";
+        this.username = "";
+        this.birth = null;
+        this.genders = "";
+    },
+    async getRegisDetail() {
+      try {
+        const res = await fetch(this.url);
+        const data = await res.json();
+        return data;
+      } catch(error) {
+        console.log(`Could not confirm. ${error}`);
+      }
+    },
+    async addRegis(newRegis) {
+      try {
+        const res = await fetch(this.url,{
+          method: "POST",
+          headers: {
+            "content-type": "application/json"
+          },
+          body: JSON.stringify({
+            firstname: newRegis.firstname,
+            lastname: newRegis.lastname,
+            email: newRegis.email,
+            username: newRegis.username,
+            birth: newRegis.birth,
+            genders: newRegis.genders
+          }),
+        });
+        const data = await res.json();
+        this.regisDetail = [...this.regisDetail, data];
+      } catch(error) {
+        console.log(`Could not confirm. ${error}`);
+      }
+    },
+     async created() {
+      this.regisDetail = await this.getRegisDetail();
     }
   }
 };
