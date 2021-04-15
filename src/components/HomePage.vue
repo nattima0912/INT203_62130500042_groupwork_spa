@@ -1,9 +1,9 @@
 <template>
-<div  class="h-screen w-screen mx-auto ">
-         <div class="border py-10 bg-dark">
-        <h1 class="text-4xl  text-sky  text-center ">{{ msg }}</h1>
+<div class="h-screen w-screen mx-auto ">
+         <div class="border-lavender  py-10 bg-gradient-to-r from-lavender to-rose ">
+        <h1 class="text-4xl  text-white  text-center ">{{ msg }}</h1>
         </div>
-        <div class=" flex transform hover:scale-110  ">
+        <news-card>
             <img class="pl-20 py-10 cursor-pointer " src="..\assets\pic1.jpg">
             <div class="border-2 md:border-t-1  mt-10 mb-10">
                 <p class="text-xl pt-6 pl-5 pr-8 tracking-tight  cursor-pointer ">Beyond LIVE - SUPER
@@ -12,9 +12,8 @@
                 <p class="text-xs pt-2 pl-5">11/7 (SAT) 17:00 (KST) Welcome to online-fanmeeting of SuperJunior's
                     15th<br />anniversary!</p>
             </div>
-        </div>
-
-        <div class="flex transform hover:scale-110  ">
+        </news-card>
+        <news-card>
             <img class="pl-20 mb-20 mt-0 cursor-pointer " src="..\assets\pic2.jpg">
             <div class="border-2 md:border-t-1  mt-0 mb-20">
                 <p class="text-xl pt-6 pl-5 pr-8 tracking-tight  cursor-pointer">Heart 4 U - CHANYEOL
@@ -23,7 +22,7 @@
                 <p class="text-xs pt-4 pl-5 pr-14 ">เข้าร่วม 'Heart 4 U - CHANYEOL' MEMBERSHIP ตอนนี้
                     แล้วพบกับตอนหลักล่วงหน้าสอง<br />สัปดาห์!</p>
             </div>
-        </div>
+        </news-card>
 
     </div>
     
@@ -31,7 +30,7 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'HomePage',
   props: {
     msg: String
   }

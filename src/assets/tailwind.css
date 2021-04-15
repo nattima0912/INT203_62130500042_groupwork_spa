@@ -3,3 +3,16 @@
 @tailwind components;
 
 @tailwind utilities;
+
+.format{
+    @apply flex flex-col;
+}
+.regis {
+    @apply bg-gray-100 rounded-lg px-4 py-2 mb-4;
+}
+.login {
+    @apply flex justify-center mt-4 cursor-pointer;
+}
+.news {
+    @apply flex transform hover:scale-110 ;  
+}

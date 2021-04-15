@@ -1,6 +1,6 @@
 <template>
   <div class="SignUp">
-    <SignUpSystem  msg="Login For Enjoy This Website"/>
+    <SignUpSystem  msg="Register"/>
   </div>
 </template>
 

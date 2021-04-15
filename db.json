@@ -1,0 +1,12 @@
+{
+    "regisDetail": [
+        {
+            "firstname": "nattima" ,
+            "lastname": "mahapan",
+            "genders": "female",
+            "email": "nat@gmail.com",
+            "phone": "26846546",
+            "birth": "15/05/2000"
+        }
+    ]
+}

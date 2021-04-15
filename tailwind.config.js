@@ -7,9 +7,11 @@ module.exports = {
       colors: {
         sky:  '#48CAE4',
         dark: '#5C677D',
-        lemon: '#70E000',
+        lemon: '#70E000',   
+        banana: '#FFFF7C',
         rose: '#FF99AC',
-        lavender: '#CDB4DB'
+        lavender: '#CDB4DB',
+        violet: '#973AA8'
       }
       
     },
