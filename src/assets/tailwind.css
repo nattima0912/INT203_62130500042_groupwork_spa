@@ -7,7 +7,7 @@
 .format{
     @apply flex flex-col;
 }
-.regis {
+.detail {
     @apply bg-gray-100 rounded-lg px-4 py-2 mb-4;
 }
 .login {
