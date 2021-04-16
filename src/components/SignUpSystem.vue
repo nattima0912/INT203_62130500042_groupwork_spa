@@ -281,6 +281,16 @@ export default {
         console.log(`Could not confirm. ${error}`);
       }
     },
+    async deleteRegis(deleteId) {
+      try {
+        await fetch(`${this.url}/${deleteId}`, {
+          method: "DELETE",
+        })
+        this.regisDetail = this.regisDetail.filter((regis) => regis.id !== deleteId);
+      } catch(error) {
+        console.log(`Could not confirm. ${error}`);
+      }
+    }
   },
   async created() {
       this.regisDetail = await this.getRegisDetail();
